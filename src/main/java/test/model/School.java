@@ -43,7 +43,7 @@ public class School {
 				", _address='" + _address + '\'' +
 				'}';
 	}
-
+	//List might be empty, so Optional is used as a null safeguard
 	public <T extends Person> Optional<T> getFirstPerson(Class<T> type) {
 		return _people.stream()
 				.filter(person -> type.isAssignableFrom(person.getClass()))
