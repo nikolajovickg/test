@@ -32,7 +32,8 @@ public class Student extends Person {
 				", _classes=" + _classes +
 				"} " + super.toString();
 	}
-
+	
+	//Average is not an integer
 	public double getAverageGrade() {
 		return _classes.stream()
 				.mapToDouble(SchoolClass::getGrade)
